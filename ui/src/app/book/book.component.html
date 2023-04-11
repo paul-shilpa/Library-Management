@@ -1,0 +1,42 @@
+<div class="container">
+    <a mat-raised-button color="accent" routerLink="/add-book">ADD</a>
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                   
+                    <th>Tiltle</th>   
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Publisher</th>
+                    <th>Copies</th>
+                    <th>Category</th>   
+                    <th>Genre</th>
+                    <th>Subgenre</th>
+                    <th>Action</th>   
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let book of books">
+                   
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.isbn }}</td>
+                    <td>{{ book.publisher }}</td>
+                    <td>{{ book.copies }}</td>
+                    <td>{{ book.category }}</td>
+                    <td>{{ book.genre }}</td>
+                    <td>{{ book.subgenre }}</td>
+                    <td>
+                        <button mat-raised-button color="warn"  (click)="doDelete(book.id)">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            
+        </div>
+
+    </div>
+</div>

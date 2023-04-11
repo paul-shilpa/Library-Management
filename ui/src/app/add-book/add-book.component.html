@@ -1,0 +1,58 @@
+<div class="container">
+    <mat-card class="card">
+      <form (ngSubmit)="doSubmitForm()">
+      <mat-card-header><h1>ADD BOOKS</h1> </mat-card-header>
+      <mat-card-content>
+  
+        <mat-form-field  class="feild" appearance="outline">
+          <mat-label>Title</mat-label>
+          <input name="Title" [(ngModel)]="data.title" matInput>
+        </mat-form-field>
+  
+        <mat-form-field  class="feild" appearance="outline">
+          <mat-label>Author</mat-label>
+          <input name="Author" [(ngModel)]="data.author" matInput>
+        </mat-form-field>
+  
+        <mat-form-field  class="feild" appearance="outline">
+            <mat-label>ISBN</mat-label>
+            <input name="ISBN" [(ngModel)]="data.isbn" matInput>
+          </mat-form-field>
+          <mat-form-field  class="feild" appearance="outline">
+            <mat-label>Publisher</mat-label>
+            <input name="publisher" [(ngModel)]="data.publisher" matInput>
+          </mat-form-field>
+    
+          <mat-form-field  class="feild" appearance="outline">
+            <mat-label>Copies</mat-label>
+            <input name="copies" [(ngModel)]="data.copies" matInput>
+          </mat-form-field>
+    
+          <mat-form-field  class="feild" appearance="outline">
+              <mat-label>Genre</mat-label>
+              <input name="genre" [(ngModel)]="data.genre" matInput>
+            </mat-form-field>
+            <mat-form-field  class="feild" appearance="outline">
+              <mat-label>Subgenre</mat-label>
+              <input name="Category" [(ngModel)]="data.subgenre" matInput>
+            </mat-form-field>
+         
+      
+            <mat-form-field  class="feild" appearance="outline">
+              <mat-label>Category</mat-label>
+              <input name="category" [(ngModel)]="data.category" matInput>
+            </mat-form-field>
+      
+      </mat-card-content>
+        <div class="text-center">
+  
+            <mat-spinner *ngIf="!flag" style="margin: auto;width: 25px;height: 25px;"></mat-spinner>
+  
+          <button type="submit" mat-raised-button color="primary">Save</button>
+          <button type="reset" mat-raised-button color="accent">Reset</button>
+        </div>
+      </form>
+    
+    </mat-card>
+  </div>
+  
